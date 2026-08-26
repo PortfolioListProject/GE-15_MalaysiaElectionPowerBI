@@ -1,0 +1,360 @@
+table Results
+	lineageTag: a839d0d8-b96f-47c8-bf1a-78525c5ccf9f
+
+	measure 'PN Total Votes' =
+			
+			SUMX(
+			    'Results',
+			    IF('Results'[Winner] = "National Alliance PN", 'Results'[votes_valid], 0)
+			)
+		formatString: 0
+		displayFolder: Total Votes
+		lineageTag: 609ebf5a-d6e5-4943-b474-d826e29e0b1f
+
+	measure 'BN Total Votes' =
+			
+			SUMX(
+			    'Results',
+			    IF('Results'[Winner] = "National Front BN", 'Results'[votes_valid], 0)
+			)
+		formatString: 0
+		displayFolder: Total Votes
+		lineageTag: ba6f344a-d1d4-4e29-a91a-944ba5a9c152
+
+	measure 'PH Total Votes' =
+			
+			SUMX(
+			    'Results',
+			    IF('Results'[Winner] = "Alliance Of Hope PH", 'Results'[votes_valid], 0)
+			)
+		formatString: 0
+		displayFolder: Total Votes
+		lineageTag: 0abf367c-892e-43ce-9d47-1f9789e8e3f7
+
+	measure 'BN Seats Won' =
+			
+			CALCULATE(
+			    COUNTROWS('Results'),
+			    CONTAINSSTRING('Results'[Winner], "BN") || CONTAINSSTRING('Results'[Winner], "Barisan")
+			)
+		formatString: 0
+		displayFolder: Seats Won
+		lineageTag: d7180979-9a05-4136-981a-ac3338e25fb6
+
+	measure 'PN Seats Won' =
+			
+			CALCULATE(
+			    COUNTROWS('Results'),
+			    CONTAINSSTRING('Results'[Winner], "PN") || CONTAINSSTRING('Results'[Winner], "Perikatan")
+			)
+		formatString: 0
+		displayFolder: Seats Won
+		lineageTag: 7471421c-4bba-4d8f-b51c-bd1a6361ca79
+
+	measure 'PH Seats Won' =
+			
+			CALCULATE(
+			    COUNTROWS('Results'),
+			    CONTAINSSTRING('Results'[Winner], "PH") || CONTAINSSTRING('Results'[Winner], "Harapan")
+			)
+		formatString: 0
+		displayFolder: Seats Won
+		lineageTag: 96794aa6-011b-4b69-8b26-f2dd81cf63a1
+
+	measure 'GPS Total Votes' =
+			
+			SUMX(
+			    'Results',
+			    IF('Results'[Winner] = "Sarawak Parties Alliance GPS", 'Results'[votes_valid], 0)
+			)
+		formatString: 0
+		displayFolder: Total Votes
+		lineageTag: 2c028ea5-ff6e-44b3-9294-91f919cdd81b
+
+	measure 'GPS Seats Won' =
+			
+			CALCULATE(
+			    COUNTROWS('Results'),
+			    CONTAINSSTRING('Results'[Winner], "GPS") || CONTAINSSTRING('Results'[Winner], "Gabungan")
+			)
+		formatString: 0
+		displayFolder: Seats Won
+		lineageTag: b385ab44-73f4-40ed-aa1f-7a42451928cc
+
+	measure 'GRS Total Votes' =
+			
+			SUMX(
+			    'Results',
+			    IF('Results'[Winner] = "Sabah People's Coalition GRS", 'Results'[votes_valid], 0)
+			)
+		formatString: 0
+		displayFolder: Total Votes
+		lineageTag: 7cce3931-1d03-434d-a2cc-7eb8dd3324f9
+
+	measure 'GRS Seats Won' =
+			
+			CALCULATE(
+			    COUNTROWS('Results'),
+			    CONTAINSSTRING('Results'[Winner], "GRS") || CONTAINSSTRING('Results'[Winner], "Gabungan")
+			)
+		formatString: 0
+		displayFolder: Seats Won
+		lineageTag: 320519d4-d708-46d0-9e42-4647309cc4f3
+
+	measure 'PW Total Votes' =
+			
+			SUMX(
+			    'Results',
+			    IF('Results'[Winner] = "Heritage Party PW", 'Results'[votes_valid], 0)
+			)
+		formatString: 0
+		displayFolder: Total Votes
+		lineageTag: da3abbc2-63b2-43e5-bfdb-932dba8f1000
+
+	measure 'KDM Total Votes' =
+			
+			SUMX(
+			    'Results',
+			    IF('Results'[Winner] = "Social Democratic Harmony Party KDM", 'Results'[votes_valid], 0)
+			)
+		formatString: 0
+		displayFolder: Total Votes
+		lineageTag: 49372135-1f03-4e46-a693-eeb62aff6c8c
+
+	measure 'PBM Total Votes' =
+			
+			SUMX(
+			    'Results',
+			    IF('Results'[Winner] = "Malaysian Nation Party PBM", 'Results'[votes_valid], 0)
+			)
+		formatString: 0
+		displayFolder: Total Votes
+		lineageTag: df013182-0ded-45b8-b052-7416da38992e
+
+	measure 'I Total Votes' =
+			
+			SUMX(
+			    'Results',
+			    IF('Results'[Winner] = "Independent I", 'Results'[votes_valid], 0)
+			)
+		formatString: 0
+		displayFolder: Total Votes
+		lineageTag: 34beb2e4-a04d-452d-b6e7-abc31a0c6551
+
+	measure 'PW Seats Won' =
+			
+			CALCULATE(
+			    COUNTROWS('Results'),
+			    CONTAINSSTRING('Results'[Winner], "PW") || CONTAINSSTRING('Results'[Winner], "Warisan")
+			)
+		formatString: 0
+		displayFolder: Seats Won
+		lineageTag: b50a2b35-3965-4fea-8f7f-46d21b3bf54a
+
+	measure 'KDM Seats Won' =
+			
+			CALCULATE(
+			    COUNTROWS('Results'),
+			    CONTAINSSTRING('Results'[Winner], "KDM") || CONTAINSSTRING('Results'[Winner], "Masyarakat")
+			)
+		formatString: 0
+		displayFolder: Seats Won
+		lineageTag: 6ecc2871-64e3-4213-ba7d-b0f735be9d0d
+
+	measure 'PBM Seats Won' =
+			
+			CALCULATE(
+			    COUNTROWS('Results'),
+			    CONTAINSSTRING('Results'[Winner], "PBM") || CONTAINSSTRING('Results'[Winner], "Bangsa")
+			)
+		formatString: 0
+		displayFolder: Seats Won
+		lineageTag: e69d06c2-6d0b-4a1b-a2c1-e02032304d19
+
+	measure 'I Seats Won' =
+			
+			CALCULATE(
+			    COUNTROWS('Results'),
+			    CONTAINSSTRING('Results'[Winner], "Independent I") || CONTAINSSTRING('Results'[Winner], "Independent")
+			)
+		formatString: 0
+		displayFolder: Seats Won
+		lineageTag: ba427d73-bec3-4249-b91d-3e4b5cab6192
+
+	measure 'MUDA Total Votes' =
+			
+			SUMX(
+			    'Results',
+			    IF('Results'[Winner] = "Malaysian United Democratic Alliance MUDA", 'Results'[votes_valid], 0)
+			)
+		formatString: 0
+		displayFolder: Total Votes
+		lineageTag: 065e93ea-d16e-4a60-97df-5804dbb9e5c5
+
+	measure 'MUDA Seats Won' =
+			
+			CALCULATE(
+			    COUNTROWS('Results'),
+			    CONTAINSSTRING('Results'[Winner], "MUDA") || CONTAINSSTRING('Results'[Winner], "Ikatan")
+			)
+		formatString: 0
+		displayFolder: Seats Won
+		lineageTag: d2f66fad-4046-4135-855c-844c585e141d
+
+	column 'Constituency Code'
+		dataType: string
+		lineageTag: 6629c885-860a-423a-896b-e72d932a7b80
+		summarizeBy: none
+		sourceColumn: Constituency Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Constituency Name'
+		dataType: string
+		lineageTag: 6b7786e7-c9ea-44ab-9a92-9ff603441be2
+		summarizeBy: none
+		sourceColumn: Constituency Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Winner
+		dataType: string
+		lineageTag: 59c0f17d-8623-449c-a3be-1cd1c1e0d9e9
+		summarizeBy: none
+		sourceColumn: Winner
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Winner Name'
+		dataType: string
+		lineageTag: f786f2be-5fce-4cf1-9d43-9feffc111d8b
+		summarizeBy: none
+		sourceColumn: Winner Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Seats
+		dataType: int64
+		formatString: 0
+		lineageTag: 0244be65-ad30-4440-a9c1-afc8e60cafba
+		summarizeBy: sum
+		sourceColumn: Seats
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		lineageTag: bb04180a-8e4d-4ac9-ab32-8f3b07dbbeec
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column voters_total
+		dataType: int64
+		formatString: 0
+		lineageTag: cf2c3c9b-d4fd-4b02-b2a2-302f9ff3db91
+		summarizeBy: sum
+		sourceColumn: voters_total
+
+		annotation SummarizationSetBy = Automatic
+
+	column ballots_issued
+		dataType: int64
+		formatString: 0
+		lineageTag: 376cc1c2-248f-4170-9cdb-70eb642a3bc5
+		summarizeBy: sum
+		sourceColumn: ballots_issued
+
+		annotation SummarizationSetBy = Automatic
+
+	column ballots_not_returned
+		dataType: int64
+		formatString: 0
+		lineageTag: c96c01d5-bcb6-421a-b277-d324b5cc7b10
+		summarizeBy: sum
+		sourceColumn: ballots_not_returned
+
+		annotation SummarizationSetBy = Automatic
+
+	column votes_rejected
+		dataType: int64
+		formatString: 0
+		lineageTag: 5a20304d-fb8e-418a-9223-62c4173671c5
+		summarizeBy: sum
+		sourceColumn: votes_rejected
+
+		annotation SummarizationSetBy = Automatic
+
+	column votes_valid
+		dataType: int64
+		formatString: 0
+		lineageTag: 369a4bc7-5a20-4bce-94b1-ddc5dab7be9f
+		summarizeBy: sum
+		sourceColumn: votes_valid
+
+		annotation SummarizationSetBy = Automatic
+
+	column majority
+		dataType: int64
+		formatString: 0
+		lineageTag: 0f1c3fdf-cf61-415d-a44b-6037ecfcd498
+		summarizeBy: sum
+		sourceColumn: majority
+
+		annotation SummarizationSetBy = Automatic
+
+	column voter_turnout
+		dataType: double
+		lineageTag: 032e1796-6c2e-4881-8eda-9f83c479a544
+		summarizeBy: sum
+		sourceColumn: voter_turnout
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column majority_perc
+		dataType: double
+		lineageTag: 8b2d5d45-63d6-4c89-9c1d-2f52881973a1
+		summarizeBy: sum
+		sourceColumn: majority_perc
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column votes_rejcted_perc
+		dataType: double
+		lineageTag: 26729ea9-a68b-4c34-accb-2a120d616981
+		summarizeBy: sum
+		sourceColumn: votes_rejcted_perc
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ballots_not_returned_perc
+		dataType: double
+		lineageTag: 7c368201-82d5-4532-97bf-2b5077fa9b3a
+		summarizeBy: sum
+		sourceColumn: ballots_not_returned_perc
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Results = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\USER\Downloads\election_results(1).xlsx"), null, true),
+				    Results_Sheet = Source{[Item="Results",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Results_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Constituency Code", type text}, {"Constituency Name", type text}, {"Winner", type text}, {"Winner Name", type text}, {"Seats", Int64.Type}, {"Colour", type text}, {"State", type text}, {"voters_total", Int64.Type}, {"ballots_issued", Int64.Type}, {"ballots_not_returned", Int64.Type}, {"votes_rejected", Int64.Type}, {"votes_valid", Int64.Type}, {"majority", Int64.Type}, {"voter_turnout", type number}, {"majority_perc", type number}, {"votes_rejcted_perc", type number}, {"ballots_not_returned_perc", type number}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Colour"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+
