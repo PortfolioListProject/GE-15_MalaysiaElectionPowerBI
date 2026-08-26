@@ -16,8 +16,8 @@ Department of Statistics Malaysia. (2022). electoral_0_parlimen.geojson [Data se
 
 ## Dashboard Preview
 ![](PowerBIDashboardImage.png)
-![](PowerBIDashboardImage2.png)
-![](PowerBIDashboardImage3.png)
+![](PowerBIDashBoardImage3.png)
+![](PowerBIDashBoardImage2.png)
 
 ## Conclusion
 I'm Oguri Cap yo 
